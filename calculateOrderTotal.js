@@ -1,9 +1,10 @@
 // JavaScript - What could go wrong?
 function calculateOrderTotal(items, taxRate, discountCode) {
     console.log("working")
-    // Is items an array? What's in it?
-    // Is taxRate a number or percentage?
-    // What if discountCode is undefined?
+    const price = items * 3.0
+    const tax = taxRate * price
+    const discount = price - discountCode
+    return price + tax - discount
 }
 
-calculateOrderTotal(1, 2, 3)
+calculateOrderTotal("string", "string 2", "string 3")
